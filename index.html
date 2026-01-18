@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSAN TRAVEL - 바다와 문화의 도시</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333333;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0066CC 0%, #00B4DB 100%);
+        }
+
+        .btn-primary {
+            background-color: #FF6B35;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e85a24;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- 상단 네비게이션 바 -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-[#0066CC] tracking-tighter">BUSAN TRAVEL</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-[#0066CC] font-medium border-b-2 border-[#0066CC] px-1 py-1">홈</a>
+                        <a href="#beach" class="text-gray-600 hover:text-[#0066CC] transition-colors px-1 py-1">해변</a>
+                        <a href="#food" class="text-gray-600 hover:text-[#0066CC] transition-colors px-1 py-1">음식</a>
+                        <a href="#culture" class="text-gray-600 hover:text-[#0066CC] transition-colors px-1 py-1">문화</a>
+                    </div>
+                </div>
+                <!-- 모바일 메뉴 버튼 (기능은 JS로 확장 가능) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero-gradient pt-16 min-h-[80vh] flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <p class="text-white/80 text-lg md:text-xl font-light mb-4 tracking-widest uppercase">Welcome to Busan</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+                바다와 문화가 만나는 도시, <br class="hidden md:block"> 부산에 오신 것을 환영합니다
+            </h1>
+            <a href="#intro" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium inline-block">
+                여행 시작하기
+            </a>
+        </div>
+    </section>
+
+    <!-- 부산 소개 섹션 -->
+    <section id="intro" class="py-20 bg-white px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">대한민국 제2의 수도, 부산</h2>
+                <div class="w-20 h-1 bg-[#0066CC] mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-[#0066CC]/10 p-3 rounded-lg mr-4 text-[#0066CC]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">위치</h3>
+                            <p class="text-gray-600">대한민국 동남부 해안에 위치한 제2의 도시이자 최대의 항구 도시입니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#0066CC]/10 p-3 rounded-lg mr-4 text-[#0066CC]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">특징</h3>
+                            <p class="text-gray-600">아름다운 해운대와 광안리 해변, 풍부한 길거리 먹거리, 그리고 감천문화마을 같은 독특한 문화가 공존합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#0066CC]/10 p-3 rounded-lg mr-4 text-[#0066CC]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">인구</h3>
+                            <p class="text-gray-600">약 340만 명의 시민들이 함께 살아가는 활기찬 대도시입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- 이미지 플레이스홀더를 대신한 시각적 요소 -->
+                    <div class="rounded-2xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <span class="text-6xl mb-4 block">⚓</span>
+                            <p class="text-gray-500 italic">[대한민국 제2의 도시 부산의 전경]</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#FF6B35] rounded-2xl -z-10 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 빠른 링크 카드 섹션 -->
+    <section class="py-20 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 해변 카드 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover text-center">
+                    <div class="text-5xl mb-6">🏖️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">해변 탐방</h3>
+                    <p class="text-gray-600 mb-6">해운대, 광안리, 송정 등 부산의 푸른 바다를 만끽해 보세요.</p>
+                    <a href="#" class="text-[#0066CC] font-bold hover:underline">자세히 보기 →</a>
+                </div>
+
+                <!-- 맛집 카드 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover text-center">
+                    <div class="text-5xl mb-6">🍜</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">맛집 투어</h3>
+                    <p class="text-gray-600 mb-6">돼지국밥, 밀면, 씨앗호떡 등 부산만의 진미를 즐겨보세요.</p>
+                    <a href="#" class="text-[#0066CC] font-bold hover:underline">자세히 보기 →</a>
+                </div>
+
+                <!-- 문화 카드 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover text-center">
+                    <div class="text-5xl mb-6">🎨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">문화 체험</h3>
+                    <p class="text-gray-600 mb-6">감천문화마을과 부산국제영화제의 도시, 문화를 느껴보세요.</p>
+                    <a href="#" class="text-[#0066CC] font-bold hover:underline">자세히 보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 푸터 -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <h2 class="text-xl font-bold text-[#0066CC] mb-2">BUSAN TRAVEL</h2>
+                <p class="text-gray-400 text-sm">대한민국 최고의 해양 관광 도시 부산</p>
+            </div>
+            <div class="text-center md:text-right space-y-2">
+                <p class="text-gray-300">제작자: 2024 부산대학교 신입생</p>
+                <p class="text-gray-500 text-sm">Contact: pusan_freshman@pnu.edu</p>
+                <p class="text-gray-600 text-xs mt-4">© 2024 Busan Travel Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
